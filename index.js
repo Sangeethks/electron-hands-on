@@ -19,7 +19,7 @@ function appReadyCB() {
   mainWindow.on('closed', mainWindowCloseCB);
   // Handle the crash event
   mainWindow.webContents.on('crashed', mainWindowCrashedCB);
-  mainWindow.webContents.on('unresponsive', mainWindowUnresponsiveCB);
+  mainWindow.on('unresponsive', mainWindowUnresponsiveCB);
 }
 
 function appWindowAllClosedCB() {
