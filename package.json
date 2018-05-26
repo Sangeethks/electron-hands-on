@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Sangeethks/electron-hands-on/issues"
   },
-  "homepage": "https://github.com/Sangeethks/electron-hands-on#readme"
+  "homepage": "https://github.com/Sangeethks/electron-hands-on#readme",
+  "devDependencies": {
+    "electron": "^2.0.2"
+  }
 }
