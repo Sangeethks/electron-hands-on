@@ -16,9 +16,9 @@ function appReadyCB() {
   // Opening the developer tools
   mainWindow.webContents.openDevTools();
   // Clear the memmory when window is closed
-  mainWindow.on('closed', function () {
-    mainWindow = null;
-  });
+  mainWindow.on('closed', mainWindowCloseCB);
+  // Handle the crash event
+  mainWindow.on('crashed', mainWindowCrashedCB);
 }
 
 function appWindowAllClosedCB() {
@@ -27,4 +27,13 @@ function appWindowAllClosedCB() {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+}
+
+function mainWindowCloseCB() {
+  // Setting this to null cleans the memmory
+  mainWindow = null;
+}
+
+function mainWindowCrashedCB(event) {
+  console.log(`[App\'s main window crashed]`);
 }
