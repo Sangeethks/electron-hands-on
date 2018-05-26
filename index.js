@@ -18,7 +18,7 @@ function appReadyCB() {
   // Clear the memmory when window is closed
   mainWindow.on('closed', mainWindowCloseCB);
   // Handle the crash event
-  mainWindow.on('crashed', mainWindowCrashedCB);
+  mainWindow.webContents.on('crashed', mainWindowCrashedCB);
 }
 
 function appWindowAllClosedCB() {
