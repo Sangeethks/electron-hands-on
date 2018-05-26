@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Sangeethks/electron-hands-on#readme",
   "devDependencies": {
-    "electron": "^2.0.2"
+    "electron": "^2.0.2",
+    "electron-reload": "^1.2.2"
   }
 }

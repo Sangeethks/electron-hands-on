@@ -1,6 +1,6 @@
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const { app, BrowserWindow } = require('electron');
+// To reload the project when changes happens
+require('electron-reload')(__dirname);
 
 app.on('ready', appReadyCB);
 app.on('window-all-closed', appWindowAllClosedCB);
